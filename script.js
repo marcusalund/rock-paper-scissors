@@ -13,6 +13,10 @@ function computerPlay (){
 function playSingleRound(playerSelection, computerSelection){
     playerSelection = playerSelection[0].toUpperCase() + playerSelection.slice(1).toLowerCase();
     
+    if (playerSelection !== "Rock" && playerSelection !== "Paper" && playerSelection !== "Scissors"){
+        return "You lost! Please enter a valid response next time!!";
+    }
+
     if (playerSelection === "Rock" && computerSelection === "Scissors"){
         return "You win! Rock beats Scissors!";
     } else if (playerSelection === "Paper" && computerSelection === "Rock"){
@@ -30,5 +34,3 @@ function playSingleRound(playerSelection, computerSelection){
     }
 }
 
-//let playerSelection = prompt("Rock, Paper, or Scissors...which do you choose?").toLowerCase();
-//let computerSelection = computerPlay();
